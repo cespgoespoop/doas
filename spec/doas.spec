@@ -29,28 +29,17 @@ A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS
 # Create the build tree and copy the files from the development directories    #
 # into the build tree.                                                         #
 ################################################################################
-echo "BUILDROOT = $RPM_BUILD_ROOT"
-mkdir -p $RPM_BUILD_ROOT/usr/bin/
-pwd
-ls
 
+%setup -q
 sed -e "s/PREFIX?=.*/PREFIX?=\$RPM_BUILD_ROOT\/\/usr\/bin/g" -i Makefile
-make
-cp vidoas doas $RPM_BUILD_ROOT/usr/bin/
-exit
 
-%files
-%attr(0744, root, root) /usr/bin/doas
-%attr(0744, root, root) /usr/bin/vidoas
+%build
+make %{?_smp_mflags}
 
-%pre
 
-%post
+%install
+install -d %{buildroot}%{_bindir}
+cp -a doas %{buildroot}%{_bindir}/doas
+cp -a vidoas %{buildroot}%{_bindir}/vidoas
 
-%postun
 
-%clean
-rm -rf $RPM_BUILD_ROOT/usr/bin/doas
-rm -rf $RPM_BUILD_ROOT/usr/bin/vidoas
-
-%changelog
