@@ -31,7 +31,9 @@ A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS
 ################################################################################
 echo "BUILDROOT = $RPM_BUILD_ROOT"
 mkdir -p $RPM_BUILD_ROOT/usr/bin/
-cd doas
+pwd
+ls
+
 sed -e "s/PREFIX?=.*/PREFIX?=\$RPM_BUILD_ROOT\/\/usr\/bin/g" -i Makefile
 make
 cp vidoas doas $RPM_BUILD_ROOT/usr/bin/
