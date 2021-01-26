@@ -13,7 +13,6 @@ URL: https://github.com/slicer69/doas
 Group: System
 Packager: Jake Harris
 #BuildRoot: ~/rpmbuild/
-URL: https://github.com/cespgoespoop/doas
 Requires: gcc
 Requires: make
 Requires: byacc
