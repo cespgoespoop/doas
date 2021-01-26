@@ -12,7 +12,7 @@ License: BSD-2-Clause License
 URL: https://github.com/slicer69/doas
 Group: System
 Packager: Jake Harris
-BuildRoot: ~/rpmbuild/
+#BuildRoot: ~/rpmbuild/
 Requires: gcc
 Requires: make
 Requires: byacc
