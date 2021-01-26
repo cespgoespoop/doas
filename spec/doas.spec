@@ -9,7 +9,7 @@ Name: doas
 Version: 6.4p4
 Release: 1
 License: BSD-2-Clause License
-URL: https://github.com/slicer69/doas
+URL: https://github.com/cespgoespoop/doas/archive
 Group: System
 Packager: Jake Harris
 #BuildRoot: ~/rpmbuild/
@@ -17,7 +17,7 @@ Requires: gcc
 Requires: make
 Requires: byacc
 Requires: pam-devel
-
+Source0: %{version}.tar.gz
 # Build with the following syntax:
 # rpmbuild --target noarch -bb utils.spec
 
