@@ -17,7 +17,7 @@ Requires: gcc
 Requires: make
 Requires: byacc
 Requires: pam-devel
-Source0: %{version}.tar.gz
+Source: %{version}.tar.gz
 # Build with the following syntax:
 # rpmbuild --target noarch -bb utils.spec
 
