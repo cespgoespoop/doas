@@ -17,7 +17,7 @@ Requires: gcc
 Requires: make
 Requires: byacc
 Requires: pam-devel
-Source: %{version}.tar.gz
+Source: https://github.com/cespgoespoop/doas/archive/%{version}.tar.gz
 # Build with the following syntax:
 # rpmbuild --target noarch -bb utils.spec
 
