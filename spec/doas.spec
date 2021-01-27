@@ -39,8 +39,8 @@ echo "BUILDROOT = $RPM_BUILD_ROOT"
 %define debug_package %{nil}
 
 %build
-make clean
 #make %{?_smp_mflags}
+head -30 Makefile
 make prefix=/usr/bin SYSCONFDIR=/etc 
 
 
