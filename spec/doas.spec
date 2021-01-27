@@ -45,7 +45,6 @@ make prefix=/usr/bin SYSCONFDIR=/etc
 
 
 %install
-#install -d %{buildroot}%{_bindir}
 install -d  %{buildroot}%{_bindir}
 install -d  %{buildroot}%{_sysconfdir}
 install -d  %{buildroot}%{_mandir}/man{1,5,8}
@@ -61,5 +60,5 @@ install -Dm 0755 vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
 %files
 %attr(4755,root,root) /usr/bin/doas
 %attr(0755,root,root) /usr/bin/vidoas
-%doc %attr(0444,root,root) /usr/share/man/*
+%attr(0444,root,root) %doc /usr/share/man/*
 
