@@ -32,8 +32,8 @@ A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS
 
 
 %setup -q
-sed -e "s/PREFIX?=.*/PREFIX?=\$RPM_BUILD_ROOT\/\/usr\/bin/g" -i Makefile
-sed -e "s/SYSCONFDIR?=.*/=\$RPM_BUILD_ROOT\/etc/g" -i Makefile
+sed -e "s/PREFIX?=.*/PREFIX?=\'$RPM_BUILD_ROOT'\/\/usr\/bin/g" -i Makefile
+sed -e "s/SYSCONFDIR?=.*/=\'$RPM_BUILD_ROOT'\/etc/g" -i Makefile
 
 %define debug_package %{nil}
 
@@ -46,7 +46,7 @@ make
 #install -d %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_bindir}
 cp -a doas %{buildroot}%{_bindir}/doas
-cp -a vidoas %{buildroot}%{_bindir}/vidoas
+cp -a vidoas.final %{buildroot}%{_bindir}/vidoas
 
 mkdir -p %{buildroot}%{_sysconfdir}
 
