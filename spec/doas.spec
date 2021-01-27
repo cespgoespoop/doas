@@ -66,5 +66,3 @@ cp -a vidoas.final %{buildroot}%{_bindir}/vidoas
 /usr/share/man/man5/doas.conf.5
 /usr/share/man/man8/vidoas.8
 
-%clean
-rm -rfv $RPM_BUILD_ROOT
