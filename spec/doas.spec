@@ -43,6 +43,12 @@ echo "BUILDROOT = $RPM_BUILD_ROOT"
 head -30 Makefile
 make prefix=/usr/bin SYSCONFDIR=/etc 
 
+cat << EOF > doas.conf
+# Basic doas configuration
+permit :wheel
+
+EOF
+
 
 %install
 install -d  %{buildroot}%{_bindir}
@@ -54,6 +60,7 @@ install -Dm 0444 doas.conf.5.final $RPM_BUILD_ROOT%{_mandir}/man5/doas.conf.5
 install -Dm 0444 vidoas.8.final $RPM_BUILD_ROOT%{_mandir}/man8/vidoas.8
 install -Dm 4744 doas $RPM_BUILD_ROOT%{_bindir}/doas
 install -Dm 0755 vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
+install -Dm 0644 doas.conf $RPM_BUILD_ROOT%{_sysconfdir}/doas.conf
 
 
 
