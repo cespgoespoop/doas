@@ -7,7 +7,7 @@
 Summary: A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS.
 Name: doas
 Version: 6.3p5
-Release: 1
+Release: %{?dist}
 License: BSD-2-Clause License
 URL: https://github.com/cespgoespoop/doas/archive
 Group: System
