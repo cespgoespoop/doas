@@ -50,11 +50,11 @@ install -d  %{buildroot}%{_bindir}
 install -d  %{buildroot}%{_sysconfdir}
 install -d  %{buildroot}%{_mandir}/man{1,5,8}
 
-cp -av doas.1 $RPM_BUILD_ROOT%{_mandir}/man1/doas.1
-cp -av doas.conf.5.final $RPM_BUILD_ROOT%{_mandir}/man5/doas.conf.5
-cp -av vidoas.8.final $RPM_BUILD_ROOT%{_mandir}/man8/vidoas.8
-cp -av doas $RPM_BUILD_ROOT%{_bindir}/doas
-cp -av vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
+install -Dm 0444 doas.1 $RPM_BUILD_ROOT%{_mandir}/man1/doas.1
+install -Dm 0444 doas.conf.5.final $RPM_BUILD_ROOT%{_mandir}/man5/doas.conf.5
+install -Dm 0444 vidoas.8.final $RPM_BUILD_ROOT%{_mandir}/man8/vidoas.8
+install -Dm 4755 doas $RPM_BUILD_ROOT%{_bindir}/doas
+install -Dm 0755 vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
 
 
 
