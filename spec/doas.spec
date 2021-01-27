@@ -64,3 +64,6 @@ EOF
 /usr/bin/doas
 /usr/bin/vidoas
 /etc/doas.conf
+
+%clean
+rm -rfv $RPM_BUILD_ROOT
