@@ -62,7 +62,7 @@ cp -av vidoas.final %{buildroot}%{_bindir}/vidoas
 
 
 %files
-%defattr(-,root,root,-)
+#%defattr(-,root,root,-)
 /usr/bin/doas
 /usr/bin/vidoas
 /usr/share/man/man1/doas.1
