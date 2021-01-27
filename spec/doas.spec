@@ -30,11 +30,13 @@ A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS
 # into the build tree.                                                         #
 ################################################################################
 
+
 %setup -q
 sed -e "s/PREFIX?=.*/PREFIX?=\$RPM_BUILD_ROOT\/\/usr\/bin/g" -i Makefile
 
 %build
-make %{?_smp_mflags}
+#make %{?_smp_mflags}
+make
 
 
 %install
