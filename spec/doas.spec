@@ -39,7 +39,7 @@ A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS
 
 %build
 #make %{?_smp_mflags}
-make prefix=$RPM_BUILD_ROOT/usr/bin sysconfdir=/etc
+make prefix=/usr/bin sysconfdir=/etc
 
 
 %install
