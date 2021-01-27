@@ -59,7 +59,7 @@ install -Dm 0755 vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
 
 
 %files
-%attr(0755,root,root) /usr/bin/vidoas
 %attr(4755,root,root) /usr/bin/doas
+%attr(0755,root,root) /usr/bin/vidoas
 %doc %attr(0444,root,root) /usr/share/man/*
 
