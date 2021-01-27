@@ -54,13 +54,14 @@ cp -av doas.1 $RPM_BUILD_ROOT%{_mandir}/man1/doas.1
 cp -av doas.conf.5.final $RPM_BUILD_ROOT%{_mandir}/man5/doas.conf.5
 cp -av vidoas.8.final $RPM_BUILD_ROOT%{_mandir}/man8/vidoas.8
 cp -av doas $RPM_BUILD_ROOT%{_bindir}/doas
+chmod 4755 $RPM_BUILD_ROOT%{_bindir}/doas
 cp -av vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
 
 
 
 %files
 %defattr(-,root,root,-)
-%attr(0744,root,root) /usr/bin/vidoas
+%attr(0755,root,root) /usr/bin/vidoas
 %attr(4755,root,root) /usr/bin/doas
 %doc %attr(0444,root,root) /usr/share/man/*
 
