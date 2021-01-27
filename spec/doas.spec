@@ -51,8 +51,11 @@ mkdir -p %{buildroot}%{_mandir}/man5
 mkdir -p %{buildroot}%{_mandir}/man8
 
 cp -av doas.1 %{buildroot}%{_mandir}/man1/doas.1
+ls -lh %{buildroot}%{_mandir}/man1/doas.1
 cp -av doas.conf.5.final %{buildroot}%{_mandir}/man5/doas.conf.5
+ls -lh %{buildroot}%{_mandir}/man5/doas.conf.5
 cp -av vidoas.8.final %{buildroot}%{_mandir}/man8/vidoas.8
+ls -lh %{buildroot}%{_mandir}/man8/vidoas.8
 cp -av doas %{buildroot}%{_bindir}/doas
 cp -av vidoas.final %{buildroot}%{_bindir}/vidoas
 
