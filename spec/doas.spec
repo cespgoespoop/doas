@@ -49,7 +49,7 @@ cp -a vidoas %{buildroot}%{_bindir}/vidoas
 
 mkdir -p %{buildroot}%{_sysconfdir}
 
-cat << EOF > %{buildroot}%{_sysconfdir}
+cat << EOF > %{buildroot}%{_sysconfdir}/doas.conf
 # Please see doas.conf manual page for information on setting
 # up a doas.conf file.
 
