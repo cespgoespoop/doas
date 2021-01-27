@@ -121,3 +121,5 @@ Create a new file in the root user's home:
 On Linux versions of doas prior to 6.3p1 required commands with arguments to be prefixed by a double-dash (--). From 6.3p1 and onward the double-dash is no longer required. Here we remove a directory owned by root:
 
      doas -- rm -rf old-directory
+
+[![Copr build status](https://copr.fedorainfracloud.org/coprs/cesp/doas/package/doas/status_image/last_build.png)](https://copr.fedorainfracloud.org/coprs/cesp/doas/package/doas/)
