@@ -12,7 +12,7 @@ License: BSD-2-Clause License
 URL: https://github.com/cespgoespoop/doas/archive
 Group: System
 Packager: Jake Harris
-#BuildRoot: ~/rpmbuild/
+BuildRoot: ~/rpmbuild/
 BuildRequires: gcc
 BuildRequires: make
 BuildRequires: byacc
