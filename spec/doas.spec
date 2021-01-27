@@ -7,7 +7,7 @@
 Summary: A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS.
 Name: doas
 Version: 6.3p5
-Release: 2
+Release: 3
 License: BSD-2-Clause License
 URL: https://github.com/cespgoespoop/doas/archive
 Group: System
@@ -68,6 +68,7 @@ install -Dm 0644 doas.conf $RPM_BUILD_ROOT%{_sysconfdir}/doas.conf
 %attr(4755,root,root) /usr/bin/doas
 %attr(0755,root,root) /usr/bin/vidoas
 /usr/share/man/*
+/etc/doas.conf
 
 #%post
 #chmod -v 4111 /usr/bin/doas
