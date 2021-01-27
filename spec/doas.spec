@@ -44,9 +44,9 @@ make prefix=$RPM_BUILD_ROOT/usr/bin sysconfdir=/etc
 
 %install
 #install -d %{buildroot}%{_bindir}
-mkdir -p %{buildroot}%{_bindir}
-mkdir -p %{buildroot}%{_sysconfdir}
-mkdir -p %{buildroot}%{_mandir}/man{1,5,8}
+install -d  %{buildroot}%{_bindir}
+install -d  %{buildroot}%{_sysconfdir}
+install -d  %{buildroot}%{_mandir}/man{1,5,8}
 
 cp -av doas.1 %{buildroot}%{_mandir}/man1/doas.1
 ls -lh %{buildroot}%{_mandir}/man1/doas.1
