@@ -13,10 +13,10 @@ URL: https://github.com/cespgoespoop/doas/archive
 Group: System
 Packager: Jake Harris
 #BuildRoot: ~/rpmbuild/
-Requires: gcc
-Requires: make
-Requires: byacc
-Requires: pam-devel
+BuildRequires: gcc
+BuildRequires: make
+BuildRequires: byacc
+BuildRequires: pam-devel
 Source: https://github.com/cespgoespoop/doas/archive/%{version}.tar.gz
 # Build with the following syntax:
 # rpmbuild --target noarch -bb utils.spec
@@ -32,7 +32,6 @@ A port of OpenBSD's doas which runs on FreeBSD, Linux, NetBSD, illumos and macOS
 
 %setup -q
 sed -e "s/PREFIX?=.*/PREFIX?=\$RPM_BUILD_ROOT\/\/usr\/bin/g" -i Makefile
-dnf -y install pam-devel
 
 %build
 make %{?_smp_mflags}
