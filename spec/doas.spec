@@ -45,25 +45,26 @@ make
 %install
 #install -d %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_sysconfdir}
+mkdir -p %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_mandir}/man5
+mkdir -p %{buildroot}%{_mandir}/man8
+
+cp -a doas.1 %{buildroot}%{_mandir}/man1/doas.1
+cp -a doas.conf.5.final %{buildroot}%{_mandir}/man5/doas.conf.5
+cp -a vidoas.8.final %{buildroot}%{_mandir}/man8/vidoas.8
 cp -a doas %{buildroot}%{_bindir}/doas
 cp -a vidoas.final %{buildroot}%{_bindir}/vidoas
 
-mkdir -p %{buildroot}%{_sysconfdir}
-
-cat << EOF > %{buildroot}%{_sysconfdir}/doas.conf
-# Please see doas.conf manual page for information on setting
-# up a doas.conf file.
-
-# Permit members of the wheel group to perform actions as root.
-permit :wheel
-EOF
 
 
 %files
 %defattr(-,root,root,-)
 /usr/bin/doas
 /usr/bin/vidoas
-/etc/doas.conf
+/usr/share/man/man1/doas.1
+/usr/share/man/man5/doas.conf.5
+/usr/share/man/man8/vidoas.8
 
 %clean
 rm -rfv $RPM_BUILD_ROOT
