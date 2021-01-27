@@ -43,4 +43,7 @@ mkdir -p %{buildroot}%{_bindir}
 cp -a doas %{buildroot}%{_bindir}/doas
 cp -a vidoas %{buildroot}%{_bindir}/vidoas
 
-
+%files
+%defattr(-,root,root,-)
+/usr/bin/doas
+/usr/bin/vidoas
