@@ -18,7 +18,6 @@ BuildRequires: make
 BuildRequires: byacc
 BuildRequires: pam-devel
 Source: https://github.com/cespgoespoop/doas/archive/%{name}-%{version}.tar.gz
-Source: https://github.com/cespgoespoop/doas/archive/doas-v6.3pX.tar.gz 
 # Build with the following syntax:
 # rpmbuild --target noarch -bb utils.spec
 
