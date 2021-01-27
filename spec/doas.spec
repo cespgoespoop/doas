@@ -52,13 +52,13 @@ install -d  %{buildroot}%{_mandir}/man{1,5,8}
 install -Dm 0444 doas.1 $RPM_BUILD_ROOT%{_mandir}/man1/doas.1
 install -Dm 0444 doas.conf.5.final $RPM_BUILD_ROOT%{_mandir}/man5/doas.conf.5
 install -Dm 0444 vidoas.8.final $RPM_BUILD_ROOT%{_mandir}/man8/vidoas.8
-install -Dm 4755 doas $RPM_BUILD_ROOT%{_bindir}/doas
+install -Dm 4111 doas $RPM_BUILD_ROOT%{_bindir}/doas
 install -Dm 0755 vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
 
 
 
 %files  
-%attr(4755,root,root) /usr/bin/doas
+%attr(4111,root,root) /usr/bin/doas
 %attr(0755,root,root) /usr/bin/vidoas
 %attr(0444,root,root) %doc /usr/share/man/*
 
