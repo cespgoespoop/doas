@@ -63,6 +63,7 @@ cp -av vidoas.final $RPM_BUILD_ROOT%{_bindir}/vidoas
 
 %files
 %defattr(-,root,root,-)
-%attr(0744, root, root) /usr/bin/*
+%attr(0744, root, root) /usr/bin/vidoas
+%attr(4755, root, root) /usr/bin/doas
 %doc %attr(0444,root,root) /usr/share/man/*
 
