@@ -47,7 +47,19 @@ mkdir -p %{buildroot}%{_bindir}
 cp -a doas %{buildroot}%{_bindir}/doas
 cp -a vidoas %{buildroot}%{_bindir}/vidoas
 
+mkdir -p %{buildroot}%{_sysconfdir}
+
+cat << EOF > %{buildroot}%{_sysconfdir}
+# Please see doas.conf manual page for information on setting
+# up a doas.conf file.
+
+# Permit members of the wheel group to perform actions as root.
+permit :wheel
+EOF
+
+
 %files
 %defattr(-,root,root,-)
 /usr/bin/doas
 /usr/bin/vidoas
+/etc/doas.conf
