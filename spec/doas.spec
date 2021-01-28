@@ -78,6 +78,7 @@ install -Dm 0644 doas.pam $RPM_BUILD_ROOT%{_sysconfdir}/pam.d/doas
 %attr(0755,root,root) /usr/bin/vidoas
 /usr/share/man/*
 /etc/doas.conf
+/etc/pam.d/doas
 
 #%post
 #chmod -v 4111 /usr/bin/doas
